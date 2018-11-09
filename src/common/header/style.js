@@ -47,6 +47,18 @@ export const NavItem=styled.div`
 export const NavSearch=styled.input.attrs({
     placeholder:'搜索'
 })`
+.slide-enter{
+    transition:all .2s ease-out;
+}
+.slide-enter-active{
+    width:240;
+}
+.slide-exit{
+    transition:all .2s ease-out;
+}
+.slide-exit-active{
+    width:160;
+}
 width:160px;
 height:38px;
 border:none;
@@ -94,18 +106,7 @@ export const SearchWrapper=styled.div`
 
 float:left;
 position:relative;
-.slide-enter{
-    transition:all .2s ease-out;
-}
-.slide-enter-active{
-    width:240;
-}
-.slide-exit{
-    transition:all .2s ease-out;
-}
-.slide-exit-active{
-    width:160;
-}
+
 .iconfont{
     position:absolute;
     right:5px;
