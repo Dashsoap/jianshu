@@ -61,7 +61,10 @@ font-size:14px;
 &::placeholder{
     color:#999;
 }
-background:
+&.focused{
+    width:240px;
+
+}
 `
 export const Addition=styled.div`
     position:absolute;
@@ -91,6 +94,18 @@ export const SearchWrapper=styled.div`
 
 float:left;
 position:relative;
+.slide-enter{
+    transition:all .2s ease-out;
+}
+.slide-enter-active{
+    width:240;
+}
+.slide-exit{
+    transition:all .2s ease-out;
+}
+.slide-exit-active{
+    width:160;
+}
 .iconfont{
     position:absolute;
     right:5px;
@@ -99,7 +114,10 @@ position:relative;
     line-height:30px;
     border-radius:15px;
     text-align:center;
-    background:yellow;
+    
+    &.focused{
+        background:#777;
+    }
 
 }
 `
