@@ -47,17 +47,17 @@ export const NavItem=styled.div`
 export const NavSearch=styled.input.attrs({
     placeholder:'搜索'
 })`
-.slide-enter{
-    transition:all .2s ease-out;
+&.slide-enter {
+    transition: all .2s ease-out;
 }
-.slide-enter-active{
-    width:240;
+&.slide-enter-active {
+    width: 240px;
 }
-.slide-exit{
-    transition:all .2s ease-out;
+&.slide-exit {
+    transition: all .2s ease-out;
 }
-.slide-exit-active{
-    width:160;
+&.slide-exit-active {
+    width: 160px;
 }
 width:160px;
 height:38px;
