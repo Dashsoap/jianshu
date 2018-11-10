@@ -11,9 +11,9 @@ export const Logo=styled.a.attrs({herf:'/'})`
     
     position:absolute;
     top:10;
-    left:0;
+    left:20px;
     display:block;
-    width:100px;
+    width:36px;
     height:56px;
     background:url(${logoPic});
     background-size:contain;

@@ -2,6 +2,7 @@ import React  from 'react';
 import {CSSTransition} from 'react-transition-group';
 import { HeaderWrapper,Logo ,Nav,NavItem,Addition,Button,NavSearch,SearchWrapper} from './style';
 import {connect}from 'react-redux';
+import  {actionCreators }from './store';
 
 const Header =(props)=>{
     return(
@@ -11,7 +12,7 @@ const Header =(props)=>{
         <NavItem className='left active'>首页</NavItem>
         <NavItem className='left'>下载App</NavItem>
         <NavItem className='right'>登录</NavItem>
-        <NavItem className='right'> <i  className='iconfont'>&#xe636;</i></NavItem>
+        <NavItem className='right'> <i  className='iconfont'>&#xe613;</i></NavItem>
        <SearchWrapper>
            <CSSTransition
            in={props.focused}
@@ -32,7 +33,7 @@ const Header =(props)=>{
         <Addition>
         <Button className='writting'>
         <i  className='iconfont'>&#xe753;</i>
-        写文章</Button>
+        写测评</Button>
         <Button className='reg'>注册</Button>
         
         </Addition>
@@ -46,22 +47,18 @@ const Header =(props)=>{
  const mapDispathToProps=(dispatch)=>{
     return{
         handleInputFocus(){
-            const action={
-                type:'search_focus'
-            };
-            dispatch(action);
+           
+            dispatch(actionCreators.searchFocus());
         },
         handleInputBlur(){
-            const action={
-                type:'search_blur'
-            };
-            dispatch(action)
+         
+            dispatch(actionCreators.searchBlur());
         }
     }
 }
  const mapStateToProps=(state)=>{
     return{
-        focused:state.focused
+        focused:state.header.focused
     }
 }
 export default connect(mapStateToProps,mapDispathToProps) (Header);
